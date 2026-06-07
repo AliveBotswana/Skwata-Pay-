@@ -4,11 +4,13 @@ from app.models import models  # noqa: F401
 from app.routers.authorize import router as authorize_router
 from app.routers.admin import router as admin_router
 from app.routers.flows import router as flows_router
+from app.routers.funding import router as funding_router
 
 app = FastAPI(title="Skwata Pay Kernel", version="0.2.0")
 app.include_router(authorize_router)
 app.include_router(admin_router)
 app.include_router(flows_router)
+app.include_router(funding_router)
 
 
 @app.get("/health")
