@@ -28,6 +28,7 @@ class Wallet(Base):
     tap_limit_bwp = Column(Numeric(10, 2), nullable=False, default=200)
     cum_tap_limit_bwp = Column(Numeric(10, 2), nullable=False, default=500)
     cum_tap_spent_bwp = Column(Numeric(10, 2), nullable=False, default=0)
+    barcode_secret = Column(Text, nullable=False, default=lambda: uuid.uuid4().hex)
     created_at = Column(DateTime(timezone=True), nullable=False, default=datetime.utcnow)
 
 class WalletMember(Base):
