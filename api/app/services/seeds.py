@@ -26,7 +26,7 @@ def seed(db: Session) -> dict:
     mma  = Person(phone_e164="+26771000001", full_name="Mma Boitumelo",
                   date_of_birth=date(1978, 3, 14), pin_hash=hash_pin("9999"))
     neo  = Person(phone_e164="+26771000002", full_name="Neo Boitumelo",
-                  date_of_birth=date(2007, 1, 20), pin_hash=hash_pin("1234"))
+                  date_of_birth=date(2009, 1, 20), pin_hash=hash_pin("1234"))
     kabelo = Person(phone_e164="+26771000003", full_name="Kabelo M")
     kea  = Person(phone_e164="+26771000004", full_name="Kea (Cape Town)")
     db.add_all([mma, neo, kabelo, kea]); db.flush()
